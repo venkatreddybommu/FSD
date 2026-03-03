@@ -1,0 +1,42 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: #f4f6f9;
+}
+
+h1 {
+    text-align: center;
+}
+
+.controls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+select, button {
+    padding: 8px;
+    margin: 5px;
+    font-size: 14px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+#countSection {
+    margin-top: 15px;
+    font-weight: bold;
+}
