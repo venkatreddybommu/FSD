@@ -1,0 +1,30 @@
+package com.example.employee.controller;
+
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+import com.example.employee.model.Employee;
+import com.example.employee.service.EmployeeService;
+
+public class EmployeeController {
+
+    public static void main(String[] args) {
+
+        AnnotationConfigApplicationContext context =
+                new AnnotationConfigApplicationContext("com.example.employee");
+
+        BeanFactory factory = context;
+
+        EmployeeService service = factory.getBean(EmployeeService.class);
+
+        service.addEmployee(new Employee(1, "Venkat", "IT"));
+        service.addEmployee(new Employee(2, "Rahul", "HR"));
+
+        service.getEmployees().forEach(emp ->
+                System.out.println(emp.getId() + " " +
+                                   emp.getName() + " " +
+                                   emp.getDepartment()));
+
+        context.close();   // fixes the warning
+    }
+}

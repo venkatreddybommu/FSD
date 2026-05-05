@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Employee Details</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+<h2>Employee Details</h2>
+
+<div class="card">
+
+<p>ID: <span th:text="${emp.id}"></span></p>
+
+<p>Name: <span th:text="${emp.name}"></span></p>
+
+<p>Department: <span th:text="${emp.department}"></span></p>
+
+</div>
+
+</body>
+</html>
